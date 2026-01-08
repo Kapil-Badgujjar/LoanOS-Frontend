@@ -1,7 +1,8 @@
+"use client"
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: process.env.LOAN_OS_API_URL || "http://localhost:8000",
+  baseURL: process.env.NEXT_PUBLIC_LOAN_OS_API_URL,
 });
 
 api.interceptors.request.use((config) => {
